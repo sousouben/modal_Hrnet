@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Modal_HRnet
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![logo](public/favicon.svg)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+- ![Author](<https://img.shields.io/badge/Author-Souad Mouatakide-">)
+- ![GitHub P14_HRnet_React size](https://img.shields.io/github/repo-size/sousouben/modal_hrnet)
+- ![GitHub top language](https://img.shields.io/github/languages/top/sousouben/modal_hrnet)
+- ![GitHub language count](https://img.shields.io/github/languages/count/sousouben/modal_hrnet)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Composant modal
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Composant minimaliste d'une modal pour React.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Prérequis
 
-### `npm run build`
+- Un éditeur de texte comme [VsCode](https://code.visualstudio.com/download)
+- [Node.js > v.16](https://nodejs.org/en/)
+- [Git](https://git-scm.com/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation de la modal
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install modal_hrnet
+yarn install modal_hrnet
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### `Modal`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `message` \* : Le message que vous devez afficher
+- `closeModal` \* : Donne l'ordre de fermer la modal
+- `bcgModal` \* : Donne la couleur de fond de la modal
+- `close` \* : Donne la couleur et la forme du bouton de fermeture de la modal
+- `p` \* : Donne la couleur et la taille du message de la modal
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+##### Exemple
 
-## Learn More
+```javascript
+import React, { useState } from "react";
+import { Modal } from "modal_hrnet";
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+function ButtonCreateEmployee() {
+  const [modal, setModal] = useState(false);
+  return (
+    <div>
+      <button
+        type="submit"
+        className="openModal"
+        onClick={() => {
+          setModal(true);
+        }}
+      >
+        Save
+      </button>
+      {modal && (
+        <Modal message={"employee created"} closeModal={setModal} />
+      )}
+    </div>
+  );
+}
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+export ButtonCreateEmployee;
+```
