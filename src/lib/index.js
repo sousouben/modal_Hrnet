@@ -1,3 +1,3 @@
-import { Modal } from "./modal/Modal";
+import Modal from "./Modal";
 
 export { Modal };

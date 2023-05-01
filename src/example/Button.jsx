@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Modal from "../lib/modal/Modal";
+import Modal from "../lib/Modal";
 import "./Button.css";
 
 function Button() {
