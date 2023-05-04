@@ -12,12 +12,17 @@ function Modal(_ref) {
     message = _ref.message;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     className: "bcgModal"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "modal-wrapper"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "modal"
   }, /*#__PURE__*/_react.default.createElement("button", {
-    className: "close",
+    type: "button",
+    className: "modal-close-button",
     onClick: function onClick() {
       return closeModal(false);
     }
-  }, " ", "X", " "), /*#__PURE__*/_react.default.createElement("p", null, message)));
+  }, " ", "X", " "), /*#__PURE__*/_react.default.createElement("p", null, message)))));
 }
 var _default = Modal;
 exports.default = _default;
