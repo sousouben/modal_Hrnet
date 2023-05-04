@@ -1,6 +1,6 @@
 {
   "name": "modal_hrnet",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -47,15 +47,22 @@
   },
   "description": "Modal React component",
   "main": "dist/index.js",
-  "files": [ "dist", "README.md" ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/sousouben/modal_hrnet.git"
-    },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sousouben/modal_hrnet.git"
+  },
   "keywords": [
     "modal",
     "react"
   ],
   "author": "Mouatakide Souad",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sousouben/modal_hrnet/issues"
+  },
+  "homepage": "https://github.com/sousouben/modal_hrnet#readme"
 }
