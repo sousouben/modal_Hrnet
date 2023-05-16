@@ -3,6 +3,11 @@ import { useState } from "react";
 import Modal from "../lib/Modal";
 import "./Button.css";
 
+/**
+ * Composant représentant un bouton avec une fonctionnalité de modal.
+ * @function Button
+ * @returns {JSX.Element} Le composant Button
+ */
 function Button() {
   const [modal, setModal] = useState(false);
   return (
